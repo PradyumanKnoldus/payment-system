@@ -23,7 +23,7 @@ object PaymentSystemDriver extends App {
   println("Payment methods:")
   paymentMethods.foreach(println)
 
-  // process a payment of 100.0 using the credit card payment method
+  // process a payment of 18000.0 using the credit card payment method
   private val paymentAmount = 18000.0
 
   private val paymentSuccessful = updatedPaymentSystem3.processPayment(paymentAmount, creditCardPayment)
