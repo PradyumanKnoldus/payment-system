@@ -17,6 +17,9 @@ final case class CreditCardPayment (
 
   override def paymentProcess(amount: Double): Boolean = {
     // Code to process payment using credit card details
+    if (amount < 0) {
+      throw new IllegalArgumentException("Payment amount should be greater than zero.")
+    }
     true
   }
 }
@@ -30,6 +33,9 @@ final case class PayPalPayment (
 
   override def paymentProcess(amount: Double): Boolean = {
     // Code to process payment using PayPal credentials
+    if (amount < 0) {
+      throw new IllegalArgumentException("Payment amount should be greater than zero.")
+    }
     true
   }
 }
@@ -44,6 +50,9 @@ final case class BankTransferPayment (
 
   override def paymentProcess(amount: Double): Boolean = {
     // Code to process payment using bank transfer details
+    if (amount < 0) {
+      throw new IllegalArgumentException("Payment amount should be greater than zero.")
+    }
     true
   }
 }
